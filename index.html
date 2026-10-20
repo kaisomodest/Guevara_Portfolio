@@ -3,81 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lovely Girl Guevara | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<title>Lovely Gerl Guevara</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#060a06;color:#c8ffc8;font-family:'JetBrains Mono',monospace;min-height:100vh}
-body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg, rgba(0,255,65,0.04) 0px, transparent 2px, transparent 4px), radial-gradient(ellipse at top, rgba(0,255,65,0.12), transparent 60%);pointer-events:none;z-index:-1}
-.container{max-width:1050px;margin:30px auto;padding:20px}
-.header{display:flex;gap:35px;align-items:center;background:rgba(12,25,12,0.9);border:1px solid #00ff41;border-radius:18px;padding:40px;box-shadow:0 0 50px rgba(0,255,65,0.25);position:relative}
-.header::after{content:'● LIVE PORTFOLIO';position:absolute;top:18px;right:22px;font-size:10px;color:#00ff41;letter-spacing:2px;animation:blink 1s infinite}
-.photo{width:150px;height:150px;border-radius:50%;border:3px solid #00ff41;box-shadow:0 0 30px #00ff41, inset 0 0 20px rgba(0,255,65,0.3);overflow:hidden;flex-shrink:0;background:#000}
-.photo img{width:100%;height:100%;object-fit:cover;display:block}
-h1{font-family:'Space Grotesk',sans-serif;font-size:40px;color:#fff;text-shadow:0 0 20px #00ff41;letter-spacing:-1px}
-.typing{color:#00ff41;font-size:14px;margin-top:8px;white-space:nowrap;overflow:hidden;border-right:2px solid #00ff41;width:0;animation:typing 3.5s steps(45) forwards, blink .7s infinite}
-.tag{margin-top:14px;display:inline-block;padding:7px 15px;background:#00ff41;color:#000;font-weight:700;font-size:11px;border-radius:4px;letter-spacing:1px;box-shadow:0 0 20px #00ff41}
-.grid{display:grid;grid-template-columns:330px 1fr;gap:20px;margin-top:22px}
-.card{background:rgba(10,22,10,0.7);border:1px solid rgba(0,255,65,0.25);border-radius:14px;padding:28px;backdrop-filter:blur(12px);transition:.3s}
-.card:hover{border-color:#00ff41;box-shadow:0 0 25px rgba(0,255,65,0.15);transform:translateY(-3px)}
-h3{font-size:11px;letter-spacing:3px;color:#00ff41;margin-bottom:18px}
-h3::before{content:'> ';color:#fff}
-.bar{height:7px;background:rgba(0,255,65,0.12);border-radius:10px;overflow:hidden;margin-top:6px}
-.fill{height:100%;background:linear-gradient(90deg,#00ff41,#00cc33);box-shadow:0 0 12px #00ff41;width:0;animation:fill 1.4s ease forwards}
-.lab{border-left:2px solid #00ff41;padding-left:16px;margin-bottom:22px;position:relative;opacity:0;animation:slide .6s ease forwards}
-.lab::before{content:'';width:9px;height:9px;background:#00ff41;position:absolute;left:-5.5px;top:6px;border-radius:50%;box-shadow:0 0 12px #00ff41}
-.btn{padding:11px 20px;background:#00ff41;color:#000;text-decoration:none;font-weight:700;font-size:12px;border-radius:5px;display:inline-block;margin:6px 8px 0 0;box-shadow:0 0 18px rgba(0,255,65,0.35)}
-.btn-dark{background:transparent;color:#00ff41;border:1px solid #00ff41;box-shadow:none}
-@keyframes typing{to{width:100%}} @keyframes blink{50%{border-color:transparent}} @keyframes fill{to{width:var(--w)}} @keyframes slide{from{transform:translateX(-20px);opacity:0} to{transform:translateX(0);opacity:1}}
-@media(max-width:850px){.header{flex-direction:column;text-align:center}.grid{grid-template-columns:1fr}.typing{white-space:normal;width:100%!important;animation:none;border:none}}
+html{scroll-behavior:smooth}
+body{background:#060a06;color:#eaffea;font-family:'JetBrains Mono',monospace;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg, rgba(0,255,65,0.03) 0px, transparent 2px, transparent 4px), radial-gradient(ellipse at top, rgba(0,255,65,0.10), transparent 70%);pointer-events:none;z-index:-1}
+.container{max-width:850px;margin:0 auto;padding:24px}
+.hero{display:flex;gap:32px;align-items:center;background:rgba(12,25,12,0.92);border:2px solid #00ff41;border-radius:20px;padding:44px;box-shadow:0 0 60px rgba(0,255,65,0.22);margin-top:30px;position:relative}
+.hero::after{content:'● LIVE';position:absolute;top:18px;right:22px;font-size:10px;color:#00ff41;letter-spacing:2px;animation:blink 1s infinite}
+.photo{width:145px;height:145px;border-radius:50%;border:3px solid #00ff41;box-shadow:0 0 35px #00ff41;overflow:hidden;flex-shrink:0;background:#000}
+.photo img{width:100%;height:100%;object-fit:cover}
+h1{font-family:'Space Grotesk',sans-serif;font-size:48px;line-height:0.9;color:#fff;text-shadow:0 0 20px #00ff41;letter-spacing:-2px}
+.sub{color:#00ff41;margin-top:10px;font-size:13px;opacity:0.9}
+.desc{margin-top:18px;font-size:13px;line-height:1.7;color:#aaffaa;max-width:550px}
+.btns{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{padding:10px 18px;background:#fff;color:#000;font-weight:800;font-size:12px;text-decoration:none;border:2px solid #000;box-shadow:4px 4px 0 #000;transition:.15s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 #000}
+.btn-green{background:#d6ff4d}
+
+.section{margin-top:28px;border:2px solid #000;border-radius:16px;padding:34px;background:#d6ff4d;color:#000;box-shadow:8px 8px 0 #000}
+.section-dark{background:rgba(12,25,12,0.9);border-color:#00ff41;color:#c8ffc8;box-shadow:0 0 30px rgba(0,255,65,0.15)}
+.section h2{font-family:'Space Grotesk',sans-serif;font-size:28px;letter-spacing:-1px;display:flex;align-items:center;gap:10px}
+.section p.small{font-size:11px;letter-spacing:1px;opacity:0.7;margin-top:6px;margin-bottom:18px}
+
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card-white{background:#fff;border:2px solid #000;padding:18px;box-shadow:4px 4px 0 #000;transition:.15s}
+.card-white:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 #000}
+.card-white b{font-family:'Space Grotesk';font-size:16px}
+.card-white p{font-size:11px;margin-top:8px;line-height:1.5;opacity:0.8}
+.tag2{display:inline-block;border:1px solid #000;padding:3px 8px;font-size:9px;margin-top:10px;margin-right:5px;font-weight:700}
+
+.honest-box{border:2px dashed #000;padding:16px;margin-top:14px;background:#fff;font-size:12px;line-height:1.6}
+.dot{width:10px;height:10px;background:#000;border-radius:50%;display:inline-block}
+
+@keyframes blink{50%{opacity:0.2}}
+@media(max-width:750px){.hero{flex-direction:column;text-align:center}.cards{grid-template-columns:1fr}h1{font-size:38px}}
 </style>
 </head>
 <body>
 <div class="container">
-  <div class="header">
-    <div class="photo">
-      <img src="profile.jpg.jfif" alt="Lovely Girl Guevara">
-    </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="photo"><img src="profile.jpg" alt="Lovely Gerl Guevara"></div>
     <div>
-      <h1>Lovely Girl Guevara</h1>
-      <div class="typing">BS Computer Engineering @ ICCT | Portfolio 2025-2026</div>
-      <div class="tag">● PORTFOLIO SYSTEM ONLINE</div>
-    </div>
-  </div>
-  <div class="grid">
-    <div>
-      <div class="card">
-        <h3>CONTACT</h3>
-        <p style="font-size:13px;line-height:2.2">> Email: guevara.lovely@gmail.com<br>> Location: Antipolo, PH<br>> GitHub: kaisomodest<br>> Course: BSCpE 4th Year</p>
-        <h3 style="margin-top:32px">SKILLS</h3>
-        <p style="font-size:12px">Arduino / C++</p><div class="bar"><div class="fill" style="--w:85%"></div></div>
-        <p style="font-size:12px;margin:14px 0 4px">HTML / CSS / JavaScript</p><div class="bar"><div class="fill" style="--w:75%"></div></div>
-        <p style="font-size:12px;margin:14px 0 4px">Python / Embedded</p><div class="bar"><div class="fill" style="--w:65%"></div></div>
-        <h3 style="margin-top:32px">EDUCATION</h3>
-        <p style="font-size:13px"><b>BS Computer Engineering</b><br><span style="color:#88bb88">ICCT Colleges</span><br>2022 - Present (4th Year)</p>
-      </div>
-    </div>
-    <div>
-      <div class="card">
-        <h3>ABOUT ME</h3>
-        <p style="font-size:13.5px;color:#aaffaa;line-height:1.7">> I'm a 4th Year BS Computer Engineering student documenting my lab journey. This portfolio contains all my lab works from basic to advanced embedded systems.</p>
-        <h3 style="margin-top:32px">LABORATORY WORKS</h3>
-        <div class="lab" style="animation-delay:.2s">
-          <b style="color:#fff">LAB 01: LED Blink - My First Code</b><br><span style="font-size:11px;color:#00ff41">ARDUINO // STATUS: DONE</span><p style="font-size:13px;margin-top:6px">Basic LED blink - introduction to Arduino and GPIO control.</p>
-        </div>
-        <div class="lab" style="animation-delay:.4s">
-          <b style="color:#fff">LAB 02: Button + LED Control</b><br><span style="font-size:11px;color:#00ff41">DIGITAL INPUT // STATUS: DONE</span><p style="font-size:13px;margin-top:6px">Push button logic with debouncing for LED control.</p>
-        </div>
-        <div class="lab" style="animation-delay:.6s">
-          <b style="color:#fff">LAB 03: Add Your Next Lab</b><br><span style="font-size:11px;color:#666">WAITING FOR INPUT...</span>
-        </div>
-        <div style="margin-top:28px">
-          <a href="https://github.com/kaisomodest" class="btn">GITHUB ></a>
-          <a href="#" class="btn btn-dark">DOWNLOAD CV</a>
-        </div>
+      <h1>LOVELY GERL<br>GUEVARA</h1>
+      <div class="sub">BSCOE @ ICCT Colleges | Antipolo, PH</div>
+      <div class="desc">// This is my raw learning log as a BSCOE student at ICCT (started 2023). All lab works and codes are documented here. Honest lang - wala pa akong big projects, puro lab palang. Inspired by aakashgugilla.is-a.dev and ksamsn.github.io as basis, but this is my own design and story.</div>
+      <div class="btns">
+        <a href="https://github.com/kaisomodest" class="btn">GITHUB →</a>
+        <a href="mailto:lovelygerlguevara@gmail.com" class="btn btn-green">EMAIL ME →</a>
       </div>
     </div>
   </div>
+
+  <!-- LAB WORKS - HONEST -->
+  <div class="section">
+    <h2>⚡ LAB WORKS // LEARNING LOG</h2>
+    <p class="small">Not capstone yet - these are my hands-on beginner labs. No fake projects, real learning lang.</p>
+    <div class="cards">
+      <div class="card-white">
+        <b>LAB 01: LED BLINK</b>
+        <p>My first Arduino program - basic LED blink. Where it all started. Honestly nahirapan pa ako sa wiring dito pero gumana.</p>
+        <span class="tag2">ARDUINO</span><span class="tag2">BEGINNER</span>
+      </div>
+      <div class="card-white">
+        <b>LAB 02: BUTTON + LED</b>
+        <p>Learning digital input and control. Simple push button to control LED. Practice pa lang for bigger logic.</p>
+        <span class="tag2">ARDUINO</span><span class="tag2">LAB</span>
+      </div>
+      <div class="card-white" style="opacity:0.6">
+        <b>LAB 03: COMING SOON</b>
+        <p>Wala pa. Currently learning pa lang. I-update ko to once may bago kaming lab sa ICCT.</p>
+        <span class="tag2">TO LEARN</span>
+      </div>
+      <div class="card-white" style="opacity:0.6">
+        <b>NO MAJOR PROJECT YET</b>
+        <p>Honest lang: BSCOE 3rd year palang ako (started 2023). Focus muna sa fundamentals bago capstone.</p>
+        <span class="tag2">HONEST</span>
+      </div>
+    </div>
+    <div class="honest-box">
+      <b>> NOTE:</b> Ayoko maglagay ng di pa nagagawa. Kung wala pa, wala pa. This portfolio is my real progress, not for impress. Will update as I learn.
+    </div>
+  </div>
+
+  <!-- CURRENT GRIND -->
+  <div class="section section-dark">
+    <h2 style="color:#00ff41">> CURRENT GRIND</h2>
+    <p class="small" style="color:#88bb88">What I'm actually doing right now</p>
+    <div style="line-height:2;font-size:13px;margin-top:10px">
+      > Course: BS Computer Engineering (BSCOE) - 3rd Year<br>
+      > School: ICCT Colleges, started 2023 - Present<br>
+      > Learning: Arduino C++, basic HTML/CSS, embedded basics<br>
+      > Email: lovelygerlguevara@gmail.com<br>
+      > GitHub: kaisomodest<br>
+      > Status: Still learning, no internship yet - building foundations
+    </div>
+  </div>
+
+  <div style="text-align:center;margin:40px 0 20px;font-size:10px;letter-spacing:2px;opacity:0.5;color:#00ff41">© 2025 LOVELY GERL GUEVARA • BUILT HONESTLY • LAST UPDATE: TODAY</div>
+
 </div>
 </body>
 </html>
