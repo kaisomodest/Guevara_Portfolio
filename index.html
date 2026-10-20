@@ -1,91 +1,91 @@
-import Image from "next/image"
-
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-[#0a0a0f] text-white font-sans relative overflow-hidden">
-      {/* ===== COMPUTER BACKGROUND ===== */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:50px_50px] opacity-[0.12]"></div>
-        <div className="absolute top-20 left-[8%] w-[500px] h-[500px] bg-blue-600 rounded-full blur-[140px] opacity-20"></div>
-        <div className="absolute top-[35%] left-[38%] w-[320px] h-[120px] bg-cyan-400 rounded-full blur-[90px] opacity-25"></div>
-        <div className="absolute bottom-10 right-[8%] w-[600px] h-[350px] bg-blue-500 rounded-full blur-[130px] opacity-20"></div>
-        <div className="absolute bottom-[30%] right-[18%] w-[280px] h-[120px] bg-purple-500 rounded-full blur-[70px] opacity-15"></div>
-      </div>
-
-      {/* HEADER */}
-      <nav className="px-6 md:px-12 py-6 flex justify-between text-xs tracking-widest text-gray-400 max-w-7xl mx-auto">
-        <span className="text-blue-300">BSCOE @ ICCT Colleges | Antipolo Rizal • 2023-Present</span>
-        <span className="hidden md:block">4TH YEAR • BSCpE</span>
-      </nav>
-
-      {/* HERO */}
-      <section className="px-6 md:px-12 py-8 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h1 className="text-6xl md:text-8xl font-bold leading-[0.9]">
-            Hi,<br/> I'm<br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-400">
-              Your Name
-            </span>
-          </h1>
-          <p className="mt-6 text-gray-300 leading-relaxed max-w-lg">
-            4th Year BS Computer Engineering student with knowledge in programming, networking, and hardware-software integration. 
-            Documenting real beginner labs, projects, and small wins.
-          </p>
-          <div className="mt-6 flex gap-3 flex-wrap">
-            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300 text-xs">📍 Antipolo, Rizal</span>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="w-[300px] h-[380px] md:w-[380px] md:h-[480px] rounded-[2.5rem] overflow-hidden border border-white/10 bg-gradient-to-b from-white/10 to-transparent backdrop-blur shadow-[0_0_80px_rgba(59,130,246,0.2)]">
-            <Image src="/profile.jpg" alt="profile" width={500} height={600} className="object-cover w-full h-full" />
-          </div>
-        </div>
-      </section>
-
-      {/* LAB WORKS */}
-      <section className="mt-12 px-6 md:px-12 max-w-7xl mx-auto pb-24">
-        <div className="flex justify-between items-end mb-8">
-          <h2 className="text-4xl font-bold">Lab Works</h2>
-          <p className="text-[10px] tracking-[0.2em] text-gray-500">BSCPE • 4 MODULES • UPDATED 2026</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="p-7 rounded-[1.5rem] bg-[#12121a] border border-white/5 hover:border-blue-500/40 transition-all hover:-translate-y-1">
-            <div className="flex justify-between text-[10px] text-gray-500 mb-5 tracking-widest"><span>ARDUINO • EMBEDDED</span><span>LAB 01</span></div>
-            <h3 className="font-mono text-lg text-blue-300">LED_BLINK.ino</h3>
-            <p className="text-sm text-gray-400 mt-2">First Arduino lab — blinking LED using digital output and delay function.</p>
-            <div className="mt-5 flex gap-2"><span className="text-[10px] px-3 py-1 bg-white/5 rounded-full">ARDUINO</span><span className="text-[10px] px-3 py-1 bg-white/5 rounded-full">C++</span></div>
-          </div>
-
-          <div className="p-7 rounded-[1.5rem] bg-[#12121a] border border-white/5 hover:border-cyan-500/40 transition-all hover:-translate-y-1">
-            <div className="flex justify-between text-[10px] text-gray-500 mb-5 tracking-widest"><span>ARDUINO • INPUT</span><span>LAB 02</span></div>
-            <h3 className="font-mono text-lg text-cyan-300">BUTTON_LED.ino</h3>
-            <p className="text-sm text-gray-400 mt-2">Button input control — LED on/off using digitalRead and pull-up resistor logic.</p>
-            <div className="mt-5 flex gap-2"><span className="text-[10px] px-3 py-1 bg-white/5 rounded-full">INPUT</span><span className="text-[10px] px-3 py-1 bg-white/5 rounded-full">LOGIC</span></div>
-          </div>
-
-          <div className="p-7 rounded-[1.5rem] bg-gradient-to-br from-blue-600/20 via-indigo-600/20 to-purple-600/20 border border-blue-500/20 backdrop-blur">
-            <h3 className="font-bold text-white mb-4 text-lg">⚙️ My Tech Stack</h3>
-            <div className="flex flex-wrap gap-2 text-xs">
-              <span className="px-3 py-2 bg-white/10 rounded-full border border-white/5">Arduino / Embedded C</span>
-              <span className="px-3 py-2 bg-white/10 rounded-full border border-white/5">C++ / Python</span>
-              <span className="px-3 py-2 bg-white/10 rounded-full border border-white/5">Networking / Troubleshooting</span>
-              <span className="px-3 py-2 bg-white/10 rounded-full border border-white/5">HTML / CSS</span>
-              <span className="px-3 py-2 bg-white/10 rounded-full border border-white/5">Hardware-Software Integration</span>
-            </div>
-          </div>
-
-          <div className="p-7 rounded-[1.5rem] bg-gradient-to-br from-[#1a1a2e] to-[#16213e] border border-cyan-400/20">
-            <h3 className="font-bold text-cyan-300 mb-3 text-lg">💼 4th Year BSCpE</h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Focused on programming, networking, and embedded systems. Fast learner, willing to document and contribute to real projects. Honest work, no copy-paste — real labs only.
-            </p>
-            <div className="mt-4 text-xs text-gray-400">
-              <p>📍 Antipolo, Rizal</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  )
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lovely Guevara | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{
+  min-height:100vh;
+  background:#0a0a0f;
+  color:white;
+  position:relative;
+  overflow-x:hidden;
 }
+/* ===== COMPUTER BACKGROUND ===== */
+.bg-grid{
+  position:fixed; inset:0; z-index:-2;
+  background-image: 
+    linear-gradient(to right, #1e293b 1px, transparent 1px),
+    linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+  background-size:50px 50px;
+  opacity:0.12;
+}
+.bg-glow{
+  position:fixed; inset:0; z-index:-1; pointer-events:none;
+}
+.glow1{position:absolute; top:10%; left:10%; width:500px; height:500px; background:#2563eb; border-radius:50%; filter:blur(130px); opacity:0.18}
+.glow2{position:absolute; top:35%; left:40%; width:300px; height:120px; background:#22d3ee; border-radius:50%; filter:blur(80px); opacity:0.22}
+.glow3{position:absolute; bottom:10%; right:10%; width:600px; height:350px; background:#3b82f6; border-radius:50%; filter:blur(120px); opacity:0.15}
+
+.container{max-width:1100px; margin:0 auto; padding:40px 20px}
+.hero{display:flex; align-items:center; gap:60px; flex-wrap:wrap; justify-content:center; padding:60px 0}
+.img-wrap{
+  width:340px; height:340px; border-radius:50%; overflow:hidden;
+  border:3px solid rgba(255,255,255,0.1);
+  box-shadow:0 0 80px rgba(59,130,246,0.3);
+  flex-shrink:0;
+}
+.img-wrap img{width:100%; height:100%; object-fit:cover}
+.hero-text h1{font-size:52px; font-weight:800; line-height:1.1}
+.hero-text h1 span{color:#f472b6; background:linear-gradient(90deg,#60a5fa,#22d3ee,#a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent}
+.hero-text .sub{margin-top:10px; color:#cbd5e1; font-weight:600}
+.hero-text .loc{margin-top:8px; color:#94a3b8; font-size:14px}
+.btns{margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
+.btn-black{background:black; color:white; padding:12px 24px; border-radius:30px; border:1px solid white; font-weight:600; cursor:pointer; text-decoration:none; display:inline-block}
+.btn-outline{padding:12px 24px; border-radius:30px; border:1px solid #475569; color:#cbd5e1; font-weight:600; background:rgba(255,255,255,0.05); cursor:pointer; text-decoration:none; display:inline-block}
+
+.about{margin-top:40px; text-align:center; max-width:650px; margin-left:auto; margin-right:auto; padding-bottom:60px}
+.about h2{font-size:22px; margin-bottom:14px}
+.about p{color:#94a3b8; line-height:1.6; font-size:14px}
+
+@media(max-width:768px){
+  .hero{flex-direction:column; text-align:center}
+  .hero-text h1{font-size:38px}
+  .img-wrap{width:280px; height:280px}
+}
+</style>
+</head>
+<body>
+<div class="bg-grid"></div>
+<div class="bg-glow">
+  <div class="glow1"></div>
+  <div class="glow2"></div>
+  <div class="glow3"></div>
+</div>
+
+<div class="container">
+  <div class="hero">
+    <div class="img-wrap">
+      <img src="profile.jpg" alt="Lovely">
+    </div>
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Lovely</span></h1>
+      <div class="sub">4th Year Student | Aspiring Web Developer</div>
+      <div class="loc">From Antipolo, Rizal - Ready for OJT & Graduation!</div>
+      <div class="btns">
+        <a href="#contact" class="btn-black">Contact Me</a>
+        <a href="cv.pdf" class="btn-outline" download>Download CV</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>About Me</h2>
+    <p>I'm Lovely, a 4th Year BS Computer Engineering student from Antipolo. Currently focusing on my capstone, preparing for OJT, and exploring web development for my future career. Passionate about programming, networking, and hardware-software integration.</p>
+  </div>
+</div>
+</body>
+</html>
