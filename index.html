@@ -1,90 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lovely Guevara | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<title>Lovely - Portfolio</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{
-  min-height:100vh;
-  background:#0a0a0f;
-  color:white;
-  position:relative;
-  overflow-x:hidden;
-}
-/* ===== COMPUTER BACKGROUND ===== */
-.bg-grid{
-  position:fixed; inset:0; z-index:-2;
-  background-image: 
-    linear-gradient(to right, #1e293b 1px, transparent 1px),
-    linear-gradient(to bottom, #1e293b 1px, transparent 1px);
-  background-size:50px 50px;
-  opacity:0.12;
-}
-.bg-glow{
-  position:fixed; inset:0; z-index:-1; pointer-events:none;
-}
-.glow1{position:absolute; top:10%; left:10%; width:500px; height:500px; background:#2563eb; border-radius:50%; filter:blur(130px); opacity:0.18}
-.glow2{position:absolute; top:35%; left:40%; width:300px; height:120px; background:#22d3ee; border-radius:50%; filter:blur(80px); opacity:0.22}
-.glow3{position:absolute; bottom:10%; right:10%; width:600px; height:350px; background:#3b82f6; border-radius:50%; filter:blur(120px); opacity:0.15}
-
-.container{max-width:1100px; margin:0 auto; padding:40px 20px}
-.hero{display:flex; align-items:center; gap:60px; flex-wrap:wrap; justify-content:center; padding:60px 0}
-.img-wrap{
-  width:340px; height:340px; border-radius:50%; overflow:hidden;
-  border:3px solid rgba(255,255,255,0.1);
-  box-shadow:0 0 80px rgba(59,130,246,0.3);
-  flex-shrink:0;
-}
-.img-wrap img{width:100%; height:100%; object-fit:cover}
-.hero-text h1{font-size:52px; font-weight:800; line-height:1.1}
-.hero-text h1 span{color:#f472b6; background:linear-gradient(90deg,#60a5fa,#22d3ee,#a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent}
-.hero-text .sub{margin-top:10px; color:#cbd5e1; font-weight:600}
-.hero-text .loc{margin-top:8px; color:#94a3b8; font-size:14px}
-.btns{margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
-.btn-black{background:black; color:white; padding:12px 24px; border-radius:30px; border:1px solid white; font-weight:600; cursor:pointer; text-decoration:none; display:inline-block}
-.btn-outline{padding:12px 24px; border-radius:30px; border:1px solid #475569; color:#cbd5e1; font-weight:600; background:rgba(255,255,255,0.05); cursor:pointer; text-decoration:none; display:inline-block}
-
-.about{margin-top:40px; text-align:center; max-width:650px; margin-left:auto; margin-right:auto; padding-bottom:60px}
-.about h2{font-size:22px; margin-bottom:14px}
-.about p{color:#94a3b8; line-height:1.6; font-size:14px}
-
-@media(max-width:768px){
-  .hero{flex-direction:column; text-align:center}
-  .hero-text h1{font-size:38px}
-  .img-wrap{width:280px; height:280px}
-}
+body{margin:0;background:#0a0a0f;color:white;font-family:Arial;position:relative;overflow-x:hidden}
+.bg{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(to right,#1e293b 1px,transparent 1px),linear-gradient(to bottom,#1e293b 1px,transparent 1px);background-size:50px 50px;opacity:.12}
+.g1{position:fixed;top:10%;left:10%;width:500px;height:500px;background:#2563eb;border-radius:50%;filter:blur(130px);opacity:.18;z-index:-1}
+.g2{position:fixed;bottom:10%;right:10%;width:600px;height:350px;background:#06b6d4;border-radius:50%;filter:blur(120px);opacity:.15;z-index:-1}
+.wrap{max-width:1100px;margin:0 auto;padding:30px 20px}
+.hero{display:flex;gap:50px;align-items:center;flex-wrap:wrap;justify-content:center;padding:50px 0}
+.pic{width:320px;height:320px;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,.1);box-shadow:0 0 60px rgba(59,130,246,.3)}
+.pic img{width:100%;height:100%;object-fit:cover}
+h1{font-size:48px;line-height:1.1}h1 span{background:linear-gradient(90deg,#60a5fa,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sub{color:#cbd5e1;margin-top:10px;font-weight:bold}.loc{color:#94a3b8;margin-top:6px;font-size:14px}
+.btns{margin-top:20px;display:flex;gap:10px}.btn{background:black;color:white;padding:10px 22px;border-radius:30px;border:1px solid #fff;text-decoration:none;font-size:14px}
+.btn2{padding:10px 22px;border-radius:30px;border:1px solid #475569;color:#cbd5e1;text-decoration:none;background:rgba(255,255,255,.05);font-size:14px}
+.card{margin-top:30px;background:#12121a;border:1px solid rgba(255,255,255,.05);padding:20px;border-radius:16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px} @media(max-width:700px){.grid{grid-template-columns:1fr}.hero{flex-direction:column;text-align:center}h1{font-size:36px}}
 </style>
 </head>
 <body>
-<div class="bg-grid"></div>
-<div class="bg-glow">
-  <div class="glow1"></div>
-  <div class="glow2"></div>
-  <div class="glow3"></div>
-</div>
-
-<div class="container">
+<div class="bg"></div><div class="g1"></div><div class="g2"></div>
+<div class="wrap">
+  <div style="font-size:12px;color:#60a5fa;letter-spacing:2px">BSCOE @ ICCT Colleges | Antipolo Rizal • 2023-Present</div>
   <div class="hero">
-    <div class="img-wrap">
-      <img src="profile.jpg" alt="Lovely">
-    </div>
-    <div class="hero-text">
-      <h1>Hi, I'm <span>Lovely</span></h1>
-      <div class="sub">4th Year Student | Aspiring Web Developer</div>
-      <div class="loc">From Antipolo, Rizal - Ready for OJT & Graduation!</div>
-      <div class="btns">
-        <a href="#contact" class="btn-black">Contact Me</a>
-        <a href="cv.pdf" class="btn-outline" download>Download CV</a>
-      </div>
+    <div class="pic"><img src="profile.jpg" alt="Lovely"></div>
+    <div>
+      <h1>Hi,<br>I'm<br><span>Your Name</span></h1>
+      <div class="sub">4th Year BS Computer Engineering</div>
+      <div class="loc">📍 Antipolo, Rizal</div>
+      <p style="margin-top:12px;color:#94a3b8;max-width:400px;font-size:14px;line-height:1.5">4th Year BS Computer Engineering student with knowledge in programming, networking, and hardware-software integration. Documenting real beginner labs and small wins.</p>
+      <div class="btns"><a class="btn" href="#">Contact Me</a><a class="btn2" href="#">Download CV</a></div>
     </div>
   </div>
-
-  <div class="about">
-    <h2>About Me</h2>
-    <p>I'm Lovely, a 4th Year BS Computer Engineering student from Antipolo. Currently focusing on my capstone, preparing for OJT, and exploring web development for my future career. Passionate about programming, networking, and hardware-software integration.</p>
+  <div class="grid">
+    <div class="card"><div style="font-size:10px;color:#64748b">ARDUINO • EMBEDDED LAB 01</div><h3 style="color:#60a5fa;margin-top:10px">LED_BLINK.ino</h3><p style="color:#94a3b8;font-size:13px;margin-top:6px">First Arduino lab — blinking LED using digital output and delay function.</p></div>
+    <div class="card"><div style="font-size:10px;color:#64748b">ARDUINO • INPUT LAB 02</div><h3 style="color:#22d3ee;margin-top:10px">BUTTON_LED.ino</h3><p style="color:#94a3b8;font-size:13px;margin-top:6px">Button input control — LED on/off using digitalRead.</p></div>
+    <div class="card" style="background:linear-gradient(135deg,rgba(37,99,235,.2),rgba(139,92,246,.2));border-color:rgba(59,130,246,.3)"><h3>⚙️ My Tech Stack</h3><p style="margin-top:10px;font-size:13px;color:#cbd5e1">Arduino / Embedded C, C++ / Python, Networking, HTML/CSS, Hardware-Software Integration</p></div>
+    <div class="card"><h3 style="color:#22d3ee">💼 4th Year BSCpE</h3><p style="margin-top:10px;font-size:13px;color:#94a3b8">Focused on programming, networking, and embedded systems. Fast learner, honest work — real labs only.<br><br>📍 Antipolo, Rizal</p></div>
   </div>
 </div>
 </body>
