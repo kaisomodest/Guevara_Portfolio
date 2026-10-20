@@ -7,13 +7,13 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#060a06;color:#c8ffc8;font-family:'JetBrains Mono',monospace}
+body{background:#060a06;color:#c8ffc8;font-family:'JetBrains Mono',monospace;min-height:100vh}
 body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg, rgba(0,255,65,0.04) 0px, transparent 2px, transparent 4px), radial-gradient(ellipse at top, rgba(0,255,65,0.12), transparent 60%);pointer-events:none;z-index:-1}
 .container{max-width:1050px;margin:30px auto;padding:20px}
 .header{display:flex;gap:35px;align-items:center;background:rgba(12,25,12,0.9);border:1px solid #00ff41;border-radius:18px;padding:40px;box-shadow:0 0 50px rgba(0,255,65,0.25);position:relative}
 .header::after{content:'● LIVE PORTFOLIO';position:absolute;top:18px;right:22px;font-size:10px;color:#00ff41;letter-spacing:2px;animation:blink 1s infinite}
-.photo{width:150px;height:150px;border-radius:50%;border:3px solid #00ff41;box-shadow:0 0 30px #00ff41, inset 0 0 20px rgba(0,255,65,0.3);overflow:hidden;flex-shrink:0;background:#000;display:flex;align-items:center;justify-content:center}
-.photo img{width:100%;height:100%;object-fit:cover}
+.photo{width:150px;height:150px;border-radius:50%;border:3px solid #00ff41;box-shadow:0 0 30px #00ff41, inset 0 0 20px rgba(0,255,65,0.3);overflow:hidden;flex-shrink:0;background:#000}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
 h1{font-family:'Space Grotesk',sans-serif;font-size:40px;color:#fff;text-shadow:0 0 20px #00ff41;letter-spacing:-1px}
 .typing{color:#00ff41;font-size:14px;margin-top:8px;white-space:nowrap;overflow:hidden;border-right:2px solid #00ff41;width:0;animation:typing 3.5s steps(45) forwards, blink .7s infinite}
 .tag{margin-top:14px;display:inline-block;padding:7px 15px;background:#00ff41;color:#000;font-weight:700;font-size:11px;border-radius:4px;letter-spacing:1px;box-shadow:0 0 20px #00ff41}
@@ -26,10 +26,9 @@ h3::before{content:'> ';color:#fff}
 .fill{height:100%;background:linear-gradient(90deg,#00ff41,#00cc33);box-shadow:0 0 12px #00ff41;width:0;animation:fill 1.4s ease forwards}
 .lab{border-left:2px solid #00ff41;padding-left:16px;margin-bottom:22px;position:relative;opacity:0;animation:slide .6s ease forwards}
 .lab::before{content:'';width:9px;height:9px;background:#00ff41;position:absolute;left:-5.5px;top:6px;border-radius:50%;box-shadow:0 0 12px #00ff41}
-.btn{padding:11px 20px;background:#00ff41;color:#000;text-decoration:none;font-weight:700;font-size:12px;border-radius:5px;display:inline-block;margin:6px 8px 0 0;box-shadow:0 0 18px rgba(0,255,65,0.35);transition:.2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 0 30px #00ff41}
+.btn{padding:11px 20px;background:#00ff41;color:#000;text-decoration:none;font-weight:700;font-size:12px;border-radius:5px;display:inline-block;margin:6px 8px 0 0;box-shadow:0 0 18px rgba(0,255,65,0.35)}
 .btn-dark{background:transparent;color:#00ff41;border:1px solid #00ff41;box-shadow:none}
-@keyframes typing{to{width:100%}} @keyframes blink{50%{border-color:transparent;opacity:.5}} @keyframes fill{to{width:var(--w)}} @keyframes slide{from{transform:translateX(-20px);opacity:0} to{transform:translateX(0);opacity:1}}
+@keyframes typing{to{width:100%}} @keyframes blink{50%{border-color:transparent}} @keyframes fill{to{width:var(--w)}} @keyframes slide{from{transform:translateX(-20px);opacity:0} to{transform:translateX(0);opacity:1}}
 @media(max-width:850px){.header{flex-direction:column;text-align:center}.grid{grid-template-columns:1fr}.typing{white-space:normal;width:100%!important;animation:none;border:none}}
 </style>
 </head>
@@ -37,7 +36,7 @@ h3::before{content:'> ';color:#fff}
 <div class="container">
   <div class="header">
     <div class="photo">
-      <img src="profile.jpg" alt="My Photo" onerror="this.src='https://via.placeholder.com/150/00ff41/000000?text=ADD+PHOTO'">
+      <img src="profile.jpg.jfif" alt="Lovely Girl Guevara">
     </div>
     <div>
       <h1>Lovely Girl Guevara</h1>
@@ -51,9 +50,9 @@ h3::before{content:'> ';color:#fff}
         <h3>CONTACT</h3>
         <p style="font-size:13px;line-height:2.2">> Email: guevara.lovely@gmail.com<br>> Location: Antipolo, PH<br>> GitHub: kaisomodest<br>> Course: BSCpE 4th Year</p>
         <h3 style="margin-top:32px">SKILLS</h3>
-        <p style="font-size:12px">Arduino / C++</p><div class="bar"><div class="fill" style="--w:85%;animation-delay:.2s"></div></div>
-        <p style="font-size:12px;margin:14px 0 4px">HTML / CSS / JavaScript</p><div class="bar"><div class="fill" style="--w:75%;animation-delay:.4s"></div></div>
-        <p style="font-size:12px;margin:14px 0 4px">Python / Embedded</p><div class="bar"><div class="fill" style="--w:65%;animation-delay:.6s"></div></div>
+        <p style="font-size:12px">Arduino / C++</p><div class="bar"><div class="fill" style="--w:85%"></div></div>
+        <p style="font-size:12px;margin:14px 0 4px">HTML / CSS / JavaScript</p><div class="bar"><div class="fill" style="--w:75%"></div></div>
+        <p style="font-size:12px;margin:14px 0 4px">Python / Embedded</p><div class="bar"><div class="fill" style="--w:65%"></div></div>
         <h3 style="margin-top:32px">EDUCATION</h3>
         <p style="font-size:13px"><b>BS Computer Engineering</b><br><span style="color:#88bb88">ICCT Colleges</span><br>2022 - Present (4th Year)</p>
       </div>
@@ -64,13 +63,13 @@ h3::before{content:'> ';color:#fff}
         <p style="font-size:13.5px;color:#aaffaa;line-height:1.7">> I'm a 4th Year BS Computer Engineering student documenting my lab journey. This portfolio contains all my lab works from basic to advanced embedded systems.</p>
         <h3 style="margin-top:32px">LABORATORY WORKS</h3>
         <div class="lab" style="animation-delay:.2s">
-          <b style="color:#fff">LAB 01: LED Blink - My First Code</b><br><span style="font-size:11px;color:#00ff41">ARDUINO // STATUS: DONE</span><p style="font-size:13px;margin-top:6px">Basic LED blink - intro to Arduino and GPIO control.</p>
+          <b style="color:#fff">LAB 01: LED Blink - My First Code</b><br><span style="font-size:11px;color:#00ff41">ARDUINO // STATUS: DONE</span><p style="font-size:13px;margin-top:6px">Basic LED blink - introduction to Arduino and GPIO control.</p>
         </div>
         <div class="lab" style="animation-delay:.4s">
           <b style="color:#fff">LAB 02: Button + LED Control</b><br><span style="font-size:11px;color:#00ff41">DIGITAL INPUT // STATUS: DONE</span><p style="font-size:13px;margin-top:6px">Push button logic with debouncing for LED control.</p>
         </div>
         <div class="lab" style="animation-delay:.6s">
-          <b style="color:#fff">LAB 03: [Next Project]</b><br><span style="font-size:11px;color:#666">WAITING FOR INPUT...</span><p style="font-size:13px;margin-top:6px;color:#888">Add your next lab work here.</p>
+          <b style="color:#fff">LAB 03: Add Your Next Lab</b><br><span style="font-size:11px;color:#666">WAITING FOR INPUT...</span>
         </div>
         <div style="margin-top:28px">
           <a href="https://github.com/kaisomodest" class="btn">GITHUB ></a>
