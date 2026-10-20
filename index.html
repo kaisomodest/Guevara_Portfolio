@@ -1,46 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lovely - Portfolio</title>
+<title>Lovely Guevara | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#0a0a0f;color:white;font-family:Arial;position:relative;overflow-x:hidden}
-.bg{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(to right,#1e293b 1px,transparent 1px),linear-gradient(to bottom,#1e293b 1px,transparent 1px);background-size:50px 50px;opacity:.12}
-.g1{position:fixed;top:10%;left:10%;width:500px;height:500px;background:#2563eb;border-radius:50%;filter:blur(130px);opacity:.18;z-index:-1}
-.g2{position:fixed;bottom:10%;right:10%;width:600px;height:350px;background:#06b6d4;border-radius:50%;filter:blur(120px);opacity:.15;z-index:-1}
-.wrap{max-width:1100px;margin:0 auto;padding:30px 20px}
-.hero{display:flex;gap:50px;align-items:center;flex-wrap:wrap;justify-content:center;padding:50px 0}
-.pic{width:320px;height:320px;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,.1);box-shadow:0 0 60px rgba(59,130,246,.3)}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{background:#0a0a0f;color:#fff;font-family:'Outfit',sans-serif;overflow-x:hidden;position:relative}
+.mono{font-family:'JetBrains Mono',monospace}
+.bg-grid{position:fixed;inset:0;z-index:-2;background-image:linear-gradient(to right,#1e293b 1px,transparent 1px),linear-gradient(to bottom,#1e293b 1px,transparent 1px);background-size:50px 50px;opacity:.12}
+.g1{position:fixed;top:8%;left:5%;width:600px;height:600px;background:#2563eb;border-radius:50%;filter:blur(140px);opacity:.18;z-index:-1;animation:float 8s ease-in-out infinite}
+.g2{position:fixed;top:35%;left:38%;width:300px;height:100px;background:#22d3ee;border-radius:50%;filter:blur(80px);opacity:.22;z-index:-1;animation:float 6s ease-in-out infinite reverse}
+.g3{position:fixed;bottom:5%;right:5%;width:700px;height:400px;background:#3b82f6;border-radius:50%;filter:blur(130px);opacity:.15;z-index:-1}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 40px rgba(59,130,246,.3)}50%{box-shadow:0 0 80px rgba(59,130,246,.6)}}
+@keyframes bounce{0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(-10px)}60%{transform:translateY(-5px)}}
+@keyframes typing{from{width:0}to{width:100%}}@keyframes blink{50%{border-color:transparent}}
+
+.wrap{max-width:1100px;margin:0 auto;padding:20px 24px}
+.top{font-size:11px;letter-spacing:2.5px;color:#60a5fa;animation:fadeUp .8s ease}
+.hero{display:flex;align-items:center;gap:60px;flex-wrap:wrap;padding:50px 0 10px;min-height:80vh}
+.pic{width:340px;height:340px;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,.08);animation:fadeUp 1s ease .2s both, glowPulse 3s ease-in-out infinite;flex-shrink:0}
 .pic img{width:100%;height:100%;object-fit:cover}
-h1{font-size:48px;line-height:1.1}h1 span{background:linear-gradient(90deg,#60a5fa,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.sub{color:#cbd5e1;margin-top:10px;font-weight:bold}.loc{color:#94a3b8;margin-top:6px;font-size:14px}
-.btns{margin-top:20px;display:flex;gap:10px}.btn{background:black;color:white;padding:10px 22px;border-radius:30px;border:1px solid #fff;text-decoration:none;font-size:14px}
-.btn2{padding:10px 22px;border-radius:30px;border:1px solid #475569;color:#cbd5e1;text-decoration:none;background:rgba(255,255,255,.05);font-size:14px}
-.card{margin-top:30px;background:#12121a;border:1px solid rgba(255,255,255,.05);padding:20px;border-radius:16px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px} @media(max-width:700px){.grid{grid-template-columns:1fr}.hero{flex-direction:column;text-align:center}h1{font-size:36px}}
+.hero-text h1{font-size:60px;line-height:.9;font-weight:800}
+.hero-text h1 span{background:linear-gradient(90deg,#60a5fa,#22d3ee,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block;overflow:hidden;white-space:nowrap;border-right:3px solid #60a5fa;animation:typing 1.2s steps(6) .8s both, blink .8s step-end infinite}
+.sub{margin-top:14px;color:#cbd5e1;font-weight:600;font-size:16px}
+.loc{margin-top:6px;color:#94a3b8;font-size:14px}
+.desc{margin-top:16px;color:#94a3b8;max-width:480px;font-size:14px;line-height:1.7}
+.btns{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 26px;border-radius:30px;background:#fff;color:#000;text-decoration:none;font-weight:700;font-size:13px;transition:.3s;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn2{padding:12px 26px;border-radius:30px;border:1px solid #334155;color:#cbd5e1;text-decoration:none;background:rgba(255,255,255,.05);font-size:13px;transition:.3s;cursor:pointer}
+.btn2:hover{border-color:#60a5fa;color:#fff}
+
+/* SCROLL BUTTON */
+.scroll-down{margin-top:40px;display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;animation:fadeUp 1s ease 1.2s both}
+.scroll-down span{font-size:11px;letter-spacing:2px;color:#64748b}
+.scroll-btn{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;font-size:20px;animation:bounce 2s infinite;transition:.3s}
+.scroll-btn:hover{background:rgba(59,130,246,.2);border-color:#60a5fa;transform:scale(1.1)}
+
+.grid{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:#12121a;border:1px solid rgba(255,255,255,.06);border-radius:22px;padding:24px;transition:.4s}
+.card:hover{border-color:rgba(59,130,246,.4);transform:translateY(-6px)}
+.card .lab{font-size:10px;letter-spacing:1.5px;color:#64748b;margin-bottom:12px;display:flex;justify-content:space-between}
+.card h3{color:#60a5fa;font-size:18px}.card p{color:#94a3b8;font-size:13px;margin-top:8px;line-height:1.6}
+.tag{margin-top:14px;display:flex;gap:6px;flex-wrap:wrap}.tag span{font-size:10px;background:rgba(255,255,255,.05);padding:5px 12px;border-radius:20px;color:#94a3b8}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.hero{flex-direction:column;text-align:center;min-height:auto}.hero-text h1{font-size:46px}.pic{width:280px;height:280px}}
 </style>
 </head>
 <body>
-<div class="bg"></div><div class="g1"></div><div class="g2"></div>
+<div class="bg-grid"></div><div class="g1"></div><div class="g2"></div><div class="g3"></div>
 <div class="wrap">
-  <div style="font-size:12px;color:#60a5fa;letter-spacing:2px">BSCOE @ ICCT Colleges | Antipolo Rizal • 2023-Present</div>
-  <div class="hero">
-    <div class="pic"><img src="profile.jpg" alt="Lovely"></div>
-    <div>
-      <h1>Hi,<br>I'm<br><span>Your Name</span></h1>
-      <div class="sub">4th Year BS Computer Engineering</div>
-      <div class="loc">📍 Antipolo, Rizal</div>
-      <p style="margin-top:12px;color:#94a3b8;max-width:400px;font-size:14px;line-height:1.5">4th Year BS Computer Engineering student with knowledge in programming, networking, and hardware-software integration. Documenting real beginner labs and small wins.</p>
-      <div class="btns"><a class="btn" href="#">Contact Me</a><a class="btn2" href="#">Download CV</a></div>
-    </div>
-  </div>
-  <div class="grid">
-    <div class="card"><div style="font-size:10px;color:#64748b">ARDUINO • EMBEDDED LAB 01</div><h3 style="color:#60a5fa;margin-top:10px">LED_BLINK.ino</h3><p style="color:#94a3b8;font-size:13px;margin-top:6px">First Arduino lab — blinking LED using digital output and delay function.</p></div>
-    <div class="card"><div style="font-size:10px;color:#64748b">ARDUINO • INPUT LAB 02</div><h3 style="color:#22d3ee;margin-top:10px">BUTTON_LED.ino</h3><p style="color:#94a3b8;font-size:13px;margin-top:6px">Button input control — LED on/off using digitalRead.</p></div>
-    <div class="card" style="background:linear-gradient(135deg,rgba(37,99,235,.2),rgba(139,92,246,.2));border-color:rgba(59,130,246,.3)"><h3>⚙️ My Tech Stack</h3><p style="margin-top:10px;font-size:13px;color:#cbd5e1">Arduino / Embedded C, C++ / Python, Networking, HTML/CSS, Hardware-Software Integration</p></div>
-    <div class="card"><h3 style="color:#22d3ee">💼 4th Year BSCpE</h3><p style="margin-top:10px;font-size:13px;color:#94a3b8">Focused on programming, networking, and embedded systems. Fast learner, honest work — real labs only.<br><br>📍 Antipolo, Rizal</p></div>
-  </div>
+<div class="top mono">BSCOE @ ICCT Colleges | Antipolo Rizal • 2023-Present • 4TH YEAR BSCpE</div>
+
+<div class="hero">
+<div class="pic"><img src="profile.jpg" alt="Lovely"></div>
+<div class="hero-text">
+<h1>Hi,<br>I'm<br><span>Lovely</span></h1>
+<div class="sub">4th Year BS Computer Engineering</div>
+<div class="loc">📍 Antipolo, Rizal</div>
+<div class="desc">4th Year BS Computer Engineering student with knowledge in programming, networking, and hardware-software integration. Documenting real beginner labs, projects, and small wins.</div>
+<div class="btns">
+<a href="#works" class="btn">Explore My Work ↓</a>
+<a href="#" class="btn2">Download CV</a>
+</div>
+
+<!-- AUTO SCROLL BUTTON -->
+<div class="scroll-down" onclick="document.getElementById('works').scrollIntoView({behavior:'smooth'})">
+<span class="mono">SCROLL DOWN</span>
+<div class="scroll-btn">↓</div>
+</div>
+
+</div>
+</div>
+
+<!-- DITO BABABA PAG PININDOT -->
+<div id="works" class="grid">
+<div class="card"><div class="lab mono"><span>ARDUINO • EMBEDDED</span><span>LAB 01</span></div><h3 class="mono">LED_BLINK.ino</h3><p>First Arduino lab — blinking LED using digital output and delay function.</p><div class="tag"><span>ARDUINO</span><span>C++</span></div></div>
+<div class="card"><div class="lab mono"><span>ARDUINO • INPUT</span><span>LAB 02</span></div><h3 class="mono" style="color:#22d3ee">BUTTON_LED.ino</h3><p>Button input control — LED on/off using digitalRead.</p><div class="tag"><span>INPUT</span><span>LOGIC</span></div></div>
+<div class="card" style="background:linear-gradient(135deg,rgba(37,99,235,.18),rgba(139,92,246,.18));border-color:rgba(59,130,246,.25)"><h3 style="color:#fff">⚙️ My Tech Stack</h3><div class="tag" style="margin-top:14px"><span>Arduino / C</span><span>C++ / Python</span><span>HTML / CSS / JS</span><span>Networking</span><span>Capstone</span></div></div>
+<div class="card"><h3 style="color:#22d3ee">💼 What I Do</h3><p>Focused on embedded systems and web development. Currently working on capstone and preparing for graduation. Honest work — real labs only.</p><div class="tag"><span>📍 Antipolo, Rizal</span></div></div>
+
+<div style="grid-column:1/-1;text-align:center;margin:20px 0;padding:30px;background:linear-gradient(135deg,rgba(18,18,26,.8),rgba(22,33,62,.6));border:1px solid rgba(255,255,255,.05);border-radius:20px">
+<h3>About Me</h3>
+<p style="max-width:700px;margin:12px auto 0;color:#94a3b8;font-size:14px;line-height:1.7">I'm Lovely, a 4th Year BS Computer Engineering student from ICCT Colleges, Antipolo Rizal. I enjoy exploring both hardware and software — from Arduino labs to web development. This portfolio documents my journey and continuous learning.</p>
+<div style="margin-top:20px"><a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" class="btn2">↑ Back to Top</a></div>
+</div>
+</div>
+
 </div>
 </body>
 </html>
