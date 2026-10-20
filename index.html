@@ -3,108 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LOVELY GERL GUEVARA // ICCT</title>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@500;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<title>Lovely Girl Guevara | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a0a;color:#fff;font-family:'Inter',sans-serif;overflow-x:hidden}
-.wrap{max-width:900px;margin:0 auto;padding:30px 20px}
-.top{border:2px solid #fff;padding:10px 18px;display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:11px;background:#111}
-.hero{margin:60px 0}
-.hero h1{font-family:'Anton',sans-serif;font-size:72px;line-height:0.85;letter-spacing:-1px;text-transform:uppercase}
-.hero h1 span{color:#C4FF61;-webkit-text-stroke:1.5px #fff}
-.hero h1 .red{background:#FF2D2D;color:#000;padding:0 14px;display:inline-block;transform:rotate(-2deg);border:3px solid #fff}
-.sub{font-family:'JetBrains Mono';color:#888;font-size:13px;margin-top:18px;max-width:560px;line-height:1.6}
-.card{border:3px solid #fff;padding:24px;margin-top:20px;position:relative;transition:0.2s;cursor:pointer}
-.card:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0px #fff}
-.black{background:#111}
-.green{background:#C4FF61;color:#000;border-color:#000}
-.green h2{color:#000}
-.redcard{background:#FF2D2D;color:#fff}
-.white{background:#fff;color:#000}
-h2{font-family:'Anton';font-size:28px;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
-.tag{font-family:'JetBrains Mono';font-size:10px;font-weight:800;border:2px solid currentColor;padding:4px 10px;margin:4px;display:inline-block;text-transform:uppercase}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-a{color:inherit;font-family:'JetBrains Mono';font-weight:800;text-decoration:none;border-bottom:3px solid currentColor}
-.btn{border:3px solid #fff;background:#000;color:#fff;padding:10px 18px;display:inline-block;font-family:'JetBrains Mono';font-size:12px;margin-right:10px}
-.btn:hover{background:#fff;color:#000}
-@media(max-width:700px){.hero h1{font-size:44px}.grid{grid-template-columns:1fr}.top{flex-direction:column;gap:4px}}
+body{background:#060a06;color:#c8ffc8;font-family:'JetBrains Mono',monospace}
+body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg, rgba(0,255,65,0.04) 0px, transparent 2px, transparent 4px), radial-gradient(ellipse at top, rgba(0,255,65,0.12), transparent 60%);pointer-events:none;z-index:-1}
+.container{max-width:1050px;margin:30px auto;padding:20px}
+.header{display:flex;gap:35px;align-items:center;background:rgba(12,25,12,0.9);border:1px solid #00ff41;border-radius:18px;padding:40px;box-shadow:0 0 50px rgba(0,255,65,0.25);position:relative}
+.header::after{content:'● LIVE PORTFOLIO';position:absolute;top:18px;right:22px;font-size:10px;color:#00ff41;letter-spacing:2px;animation:blink 1s infinite}
+.photo{width:150px;height:150px;border-radius:50%;border:3px solid #00ff41;box-shadow:0 0 30px #00ff41, inset 0 0 20px rgba(0,255,65,0.3);overflow:hidden;flex-shrink:0;background:#000;display:flex;align-items:center;justify-content:center}
+.photo img{width:100%;height:100%;object-fit:cover}
+h1{font-family:'Space Grotesk',sans-serif;font-size:40px;color:#fff;text-shadow:0 0 20px #00ff41;letter-spacing:-1px}
+.typing{color:#00ff41;font-size:14px;margin-top:8px;white-space:nowrap;overflow:hidden;border-right:2px solid #00ff41;width:0;animation:typing 3.5s steps(45) forwards, blink .7s infinite}
+.tag{margin-top:14px;display:inline-block;padding:7px 15px;background:#00ff41;color:#000;font-weight:700;font-size:11px;border-radius:4px;letter-spacing:1px;box-shadow:0 0 20px #00ff41}
+.grid{display:grid;grid-template-columns:330px 1fr;gap:20px;margin-top:22px}
+.card{background:rgba(10,22,10,0.7);border:1px solid rgba(0,255,65,0.25);border-radius:14px;padding:28px;backdrop-filter:blur(12px);transition:.3s}
+.card:hover{border-color:#00ff41;box-shadow:0 0 25px rgba(0,255,65,0.15);transform:translateY(-3px)}
+h3{font-size:11px;letter-spacing:3px;color:#00ff41;margin-bottom:18px}
+h3::before{content:'> ';color:#fff}
+.bar{height:7px;background:rgba(0,255,65,0.12);border-radius:10px;overflow:hidden;margin-top:6px}
+.fill{height:100%;background:linear-gradient(90deg,#00ff41,#00cc33);box-shadow:0 0 12px #00ff41;width:0;animation:fill 1.4s ease forwards}
+.lab{border-left:2px solid #00ff41;padding-left:16px;margin-bottom:22px;position:relative;opacity:0;animation:slide .6s ease forwards}
+.lab::before{content:'';width:9px;height:9px;background:#00ff41;position:absolute;left:-5.5px;top:6px;border-radius:50%;box-shadow:0 0 12px #00ff41}
+.btn{padding:11px 20px;background:#00ff41;color:#000;text-decoration:none;font-weight:700;font-size:12px;border-radius:5px;display:inline-block;margin:6px 8px 0 0;box-shadow:0 0 18px rgba(0,255,65,0.35);transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 30px #00ff41}
+.btn-dark{background:transparent;color:#00ff41;border:1px solid #00ff41;box-shadow:none}
+@keyframes typing{to{width:100%}} @keyframes blink{50%{border-color:transparent;opacity:.5}} @keyframes fill{to{width:var(--w)}} @keyframes slide{from{transform:translateX(-20px);opacity:0} to{transform:translateX(0);opacity:1}}
+@media(max-width:850px){.header{flex-direction:column;text-align:center}.grid{grid-template-columns:1fr}.typing{white-space:normal;width:100%!important;animation:none;border:none}}
 </style>
 </head>
 <body>
-<div class="wrap">
-
-<div class="top">
-<span>kaisomodest // GUEVARA_PORTFOLIO</span>
-<span style="color:#C4FF61">ICCT BSCpE 4TH YEAR — MANILA PH</span>
+<div class="container">
+  <div class="header">
+    <div class="photo">
+      <img src="profile.jpg" alt="My Photo" onerror="this.src='https://via.placeholder.com/150/00ff41/000000?text=ADD+PHOTO'">
+    </div>
+    <div>
+      <h1>Lovely Girl Guevara</h1>
+      <div class="typing">BS Computer Engineering @ ICCT | Portfolio 2025-2026</div>
+      <div class="tag">● PORTFOLIO SYSTEM ONLINE</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div>
+      <div class="card">
+        <h3>CONTACT</h3>
+        <p style="font-size:13px;line-height:2.2">> Email: guevara.lovely@gmail.com<br>> Location: Antipolo, PH<br>> GitHub: kaisomodest<br>> Course: BSCpE 4th Year</p>
+        <h3 style="margin-top:32px">SKILLS</h3>
+        <p style="font-size:12px">Arduino / C++</p><div class="bar"><div class="fill" style="--w:85%;animation-delay:.2s"></div></div>
+        <p style="font-size:12px;margin:14px 0 4px">HTML / CSS / JavaScript</p><div class="bar"><div class="fill" style="--w:75%;animation-delay:.4s"></div></div>
+        <p style="font-size:12px;margin:14px 0 4px">Python / Embedded</p><div class="bar"><div class="fill" style="--w:65%;animation-delay:.6s"></div></div>
+        <h3 style="margin-top:32px">EDUCATION</h3>
+        <p style="font-size:13px"><b>BS Computer Engineering</b><br><span style="color:#88bb88">ICCT Colleges</span><br>2022 - Present (4th Year)</p>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h3>ABOUT ME</h3>
+        <p style="font-size:13.5px;color:#aaffaa;line-height:1.7">> I'm a 4th Year BS Computer Engineering student documenting my lab journey. This portfolio contains all my lab works from basic to advanced embedded systems.</p>
+        <h3 style="margin-top:32px">LABORATORY WORKS</h3>
+        <div class="lab" style="animation-delay:.2s">
+          <b style="color:#fff">LAB 01: LED Blink - My First Code</b><br><span style="font-size:11px;color:#00ff41">ARDUINO // STATUS: DONE</span><p style="font-size:13px;margin-top:6px">Basic LED blink - intro to Arduino and GPIO control.</p>
+        </div>
+        <div class="lab" style="animation-delay:.4s">
+          <b style="color:#fff">LAB 02: Button + LED Control</b><br><span style="font-size:11px;color:#00ff41">DIGITAL INPUT // STATUS: DONE</span><p style="font-size:13px;margin-top:6px">Push button logic with debouncing for LED control.</p>
+        </div>
+        <div class="lab" style="animation-delay:.6s">
+          <b style="color:#fff">LAB 03: [Next Project]</b><br><span style="font-size:11px;color:#666">WAITING FOR INPUT...</span><p style="font-size:13px;margin-top:6px;color:#888">Add your next lab work here.</p>
+        </div>
+        <div style="margin-top:28px">
+          <a href="https://github.com/kaisomodest" class="btn">GITHUB ></a>
+          <a href="#" class="btn btn-dark">DOWNLOAD CV</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-<div class="hero">
-<h1>BUILT <span>DIFFERENT.</span><br>LEARNING <div class="red">HARDWARE</div> THE HARD WAY.</h1>
-<p class="sub">// This is my raw learning log as a 4th Year BS Computer Engineering student at ICCT. All lab works and codes are integrated and documented here on GitHub. Inspired by aakashgugilla.is-a.dev and ksamsn.github.io as basis, but this is my own design and story.</p>
-<div style="margin-top:24px">
-<a href="https://github.com/kaisomodest" class="btn">GITHUB →</a>
-<a href="https://kaisomodest.github.io/Guevara_Portfolio/" class="btn" style="background:#C4FF61;color:#000;border-color:#000">LIVE SITE →</a>
-</div>
-</div>
-
-<div class="card green">
-<h2>⚡ LAB WORKS // PROJECTS</h2>
-<p style="font-family:'JetBrains Mono';font-size:12px;margin-top:6px">Not capstone yet — but these are my hands-on beginner projects from labs.</p>
-<div class="grid" style="margin-top:18px">
-<div class="card white">
-<h2 style="font-size:18px">LAB 01: LED BLINK</h2>
-<p style="font-size:12px;font-family:'JetBrains Mono'">My first Arduino program — basic LED blink. Where it all started.</p>
-<span class="tag">ARDUINO</span><span class="tag">BEGINNER</span>
-</div>
-<div class="card white">
-<h2 style="font-size:18px">LAB 02: BUTTON + LED</h2>
-<p style="font-size:12px;font-family:'JetBrains Mono'">Learning digital input and control. Hover to see interaction.</p>
-<span class="tag">ARDUINO</span><span class="tag">LAB</span>
-</div>
-</div>
-</div>
-
-<div class="card black">
-<h2 style="color:#C4FF61">🧠 CURRENT GRIND</h2>
-<p style="font-family:'JetBrains Mono';font-size:12px;color:#aaa;margin-top:8px;line-height:2">
-> OCT 2026: Git & GitHub Pages — Building this portfolio [DONE]<br>
-> NOW: Arduino + Sensors (DHT11, HC-SR04, Soil Moisture)<br>
-> NEXT: ESP32 + IoT // Capstone preparation
-</p>
-</div>
-
-<div class="card redcard">
-<h2>💀 FUTURE BUILDS</h2>
-<p style="font-family:'JetBrains Mono';font-size:12px;margin-top:6px">No major projects yet — planning phase. More to come.</p>
-<p style="margin-top:14px;font-weight:800">01. SMART PLANT WATERING — Automatic irrigation with soil sensor</p>
-<p style="margin-top:8px;font-weight:800">02. RFID LAB ATTENDANCE — For ICCT CpE laboratory automation</p>
-<div style="margin-top:12px"><span class="tag" style="border-color:#fff">IDEA</span><span class="tag" style="border-color:#fff">COMING SOON</span></div>
-</div>
-
-<div class="card white">
-<h2>🛠️ STACK // BEGINNER BUT REAL</h2>
-<p style="font-family:'JetBrains Mono';font-size:12px;line-height:2.2;margin-top:8px">
-<b>LANGUAGES:</b> C / Arduino C++ (basic) / Python (learning)<br>
-<b>HARDWARE:</b> Arduino Uno, Breadboard, LEDs, Resistors<br>
-<b>TOOLS:</b> Wokwi Simulator, Proteus, Git, GitHub Pages<br>
-<b>STATUS:</b> No fake projects — all codes documented on GitHub
-</p>
-</div>
-
-<p style="text-align:center;margin-top:50px;font-family:'JetBrains Mono';font-size:10px;color:#666">© 2026 LOVELY GERL GUEVARA — MAANGAS EDITION — OWN DESIGN<br>BUILT ON GITHUB PAGES // kaisomodest.github.io/Guevara_Portfolio — HOVER TO INTERACT</p>
-
-</div>
-
-<script>
-document.querySelectorAll('.card').forEach(c=>{
-  c.addEventListener('mouseenter',()=>{
-    if(!c.classList.contains('green')){c.style.transform='translate(-6px,-6px)'; c.style.boxShadow='10px 10px 0px #fff';}
-    else{c.style.transform='translate(-6px,-6px) rotate(-1deg)'; c.style.boxShadow='10px 10px 0px #000';}
-  });
-  c.addEventListener('mouseleave',()=>{c.style.transform='none'; c.style.boxShadow='none';});
-});
-</script>
-
 </body>
 </html>
