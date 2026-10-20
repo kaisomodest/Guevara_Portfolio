@@ -3,32 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lovely Gerl Guevara</title>
+<title>Lovely Gerl Guevara | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:#060a06;color:#eaffea;font-family:'JetBrains Mono',monospace;overflow-x:hidden}
+body{background:#060a06;color:#eaffea;font-family:'JetBrains Mono',monospace}
 body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg, rgba(0,255,65,0.03) 0px, transparent 2px, transparent 4px), radial-gradient(ellipse at top, rgba(0,255,65,0.10), transparent 70%);pointer-events:none;z-index:-1}
 .container{max-width:850px;margin:0 auto;padding:24px}
 .hero{display:flex;gap:32px;align-items:center;background:rgba(12,25,12,0.92);border:2px solid #00ff41;border-radius:20px;padding:44px;box-shadow:0 0 60px rgba(0,255,65,0.22);margin-top:30px;position:relative}
 .hero::after{content:'● LIVE';position:absolute;top:18px;right:22px;font-size:10px;color:#00ff41;letter-spacing:2px;animation:blink 1s infinite}
 .photo{width:145px;height:145px;border-radius:50%;border:3px solid #00ff41;box-shadow:0 0 35px #00ff41;overflow:hidden;flex-shrink:0;background:#000}
-.photo img{width:100%;height:100%;object-fit:cover}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
 h1{font-family:'Space Grotesk',sans-serif;font-size:48px;line-height:0.9;color:#fff;text-shadow:0 0 20px #00ff41;letter-spacing:-2px}
-.sub{color:#00ff41;margin-top:10px;font-size:13px;opacity:0.9}
+.sub{color:#00ff41;margin-top:10px;font-size:13px}
 .desc{margin-top:18px;font-size:13px;line-height:1.7;color:#aaffaa;max-width:550px}
 .btns{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
-.btn{padding:10px 18px;background:#fff;color:#000;font-weight:800;font-size:12px;text-decoration:none;border:2px solid #000;box-shadow:4px 4px 0 #000;transition:.15s}
-.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 #000}
+.btn{padding:10px 18px;background:#fff;color:#000;font-weight:800;font-size:12px;text-decoration:none;border:2px solid #000;box-shadow:4px 4px 0 #000}
 .btn-green{background:#d6ff4d}
 .section{margin-top:28px;border:2px solid #000;border-radius:16px;padding:34px;background:#d6ff4d;color:#000;box-shadow:8px 8px 0 #000}
 .section-dark{background:rgba(12,25,12,0.9);border-color:#00ff41;color:#c8ffc8;box-shadow:0 0 30px rgba(0,255,65,0.15)}
-.section h2{font-family:'Space Grotesk',sans-serif;font-size:28px;letter-spacing:-1px;display:flex;align-items:center;gap:10px}
+.section h2{font-family:'Space Grotesk',sans-serif;font-size:28px}
 .section p.small{font-size:11px;letter-spacing:1px;opacity:0.7;margin-top:6px;margin-bottom:18px}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.card-white{background:#fff;border:2px solid #000;padding:18px;box-shadow:4px 4px 0 #000;transition:.15s}
-.card-white:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 #000}
+.card-white{background:#fff;border:2px solid #000;padding:18px;box-shadow:4px 4px 0 #000}
 .card-white b{font-family:'Space Grotesk';font-size:16px}
 .card-white p{font-size:11px;margin-top:8px;line-height:1.5;opacity:0.8}
 .tag2{display:inline-block;border:1px solid #000;padding:3px 8px;font-size:9px;margin-top:10px;margin-right:5px;font-weight:700}
@@ -40,11 +38,13 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:48px;line-height:0.9;color:#
 <body>
 <div class="container">
   <div class="hero">
-    <div class="photo"><img src="profile.jpg" alt="Lovely Gerl Guevara"></div>
+    <div class="photo">
+      <img src="profile.jpg" alt="Lovely Gerl Guevara">
+    </div>
     <div>
       <h1>LOVELY GERL<br>GUEVARA</h1>
       <div class="sub">BSCOE @ ICCT Colleges | Antipolo, PH</div>
-      <div class="desc">// This is my raw learning log as a BSCOE student at ICCT (started 2023). All lab works and codes are documented here. Honest lang - wala pa akong big projects, puro lab palang. Inspired by aakashgugilla.is-a.dev and ksamsn.github.io as basis, but this is my own design and story.</div>
+      <div class="desc">// This is my raw learning log as a BSCOE student at ICCT (started 2023). All lab works and codes are documented here. No big projects yet - only beginner labs for now. Inspired by aakashgugilla.is-a.dev and ksamsn.github.io as basis, but this is my own design and story.</div>
       <div class="btns">
         <a href="https://github.com/kaisomodest" class="btn">GITHUB →</a>
         <a href="mailto:lovelygerlguevara@gmail.com" class="btn btn-green">EMAIL ME →</a>
@@ -54,40 +54,40 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:48px;line-height:0.9;color:#
 
   <div class="section">
     <h2>⚡ LAB WORKS // LEARNING LOG</h2>
-    <p class="small">Not capstone yet - these are my hands-on beginner labs. No fake projects, real learning lang.</p>
+    <p class="small">Not capstone yet - these are my hands-on beginner labs. No fake projects, just real learning.</p>
     <div class="cards">
       <div class="card-white">
         <b>LAB 01: LED BLINK</b>
-        <p>My first Arduino program - basic LED blink. Where it all started. Honestly nahirapan pa ako sa wiring dito pero gumana.</p>
+        <p>My first Arduino program - basic LED blink. This is where it all started. I struggled with wiring at first but it worked.</p>
         <span class="tag2">ARDUINO</span><span class="tag2">BEGINNER</span>
       </div>
       <div class="card-white">
         <b>LAB 02: BUTTON + LED</b>
-        <p>Learning digital input and control. Simple push button to control LED. Practice pa lang for bigger logic.</p>
+        <p>Learning digital input and control. Simple push button to control LED. Still practicing for bigger logic.</p>
         <span class="tag2">ARDUINO</span><span class="tag2">LAB</span>
       </div>
       <div class="card-white" style="opacity:0.6">
         <b>LAB 03: COMING SOON</b>
-        <p>Wala pa. Currently learning pa lang. I-update ko to once may bago kaming lab sa ICCT.</p>
+        <p>Not yet available. Currently still learning. I will update this once we have a new lab at ICCT.</p>
         <span class="tag2">TO LEARN</span>
       </div>
       <div class="card-white" style="opacity:0.6">
         <b>NO MAJOR PROJECT YET</b>
-        <p>Honest lang: BSCOE 3rd year palang ako (started 2023). Focus muna sa fundamentals bago capstone.</p>
+        <p>Being honest: I am in 3rd Year BSCOE (started 2023). Focusing on fundamentals first before capstone.</p>
         <span class="tag2">HONEST</span>
       </div>
     </div>
     <div class="honest-box">
-      <b>> NOTE:</b> Ayoko maglagay ng di pa nagagawa. Kung wala pa, wala pa. This portfolio is my real progress, not for impress. Will update as I learn.
+      <b>> NOTE:</b> I don't want to add projects I haven't done. If it's not done yet, it's not done. This portfolio shows my real progress, not just to impress. I will update as I learn.
     </div>
   </div>
 
   <div class="section section-dark">
     <h2 style="color:#00ff41">> CURRENT GRIND</h2>
-    <p class="small" style="color:#88bb88">What I'm actually doing right now</p>
+    <p class="small" style="color:#88bb88">What I am actually doing right now</p>
     <div style="line-height:2;font-size:13px;margin-top:10px">
-      > Course: BS Computer Engineering (BSCOE) - 3rd Year<br>
-      > School: ICCT Colleges, started 2023 - Present<br>
+      > Course: BS Computer Engineering (BSCOE) - 4th Year<br>
+      > School: ICCT Colleges, 2023 - Present<br>
       > Learning: Arduino C++, basic HTML/CSS, embedded basics<br>
       > Email: lovelygerlguevara@gmail.com<br>
       > GitHub: kaisomodest<br>
@@ -96,7 +96,6 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:48px;line-height:0.9;color:#
   </div>
 
   <div style="text-align:center;margin:40px 0 20px;font-size:10px;letter-spacing:2px;opacity:0.5;color:#00ff41">© 2025 LOVELY GERL GUEVARA • BUILT HONESTLY • LAST UPDATE: TODAY</div>
-
 </div>
 </body>
 </html>
